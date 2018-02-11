@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Оплата</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Оплата Parimatch</h1>
+        <div class="money-info clearfix">
+            <div class="money-info__sum">
+                <span class="money-info__heading">Сумма</span>
+                <span class="money-info__value">500000000 ₽</span>
+            </div>
+            <div class="money-info__commision">
+                <span class="money-info__heading">Комиссия</span>
+                <span class="money-info__value">0 ₽</span>
+            </div>
+        </div>
+        <div class="payment-detail">
+            <div class="payment-detail__trigger" tabindex="1">Детали платежа</div>
+            <div class="payment-detail__info">
+                <div class="payment-detail__field">
+                    <div class="payment-detail__label">Получатель перевода</div>
+                    <div class="payment-detail__value">Кошелек ЦУПИС</div>
+                </div>
+                <div class="payment-detail__field">
+                    <div class="payment-detail__label">ID плательщика</div>
+                    <div class="payment-detail__value">79215781669</div>
+                </div>
+                <div class="payment-detail__field">
+                    <div class="payment-detail__label">Юрлицо получателя</div>
+                    <div class="payment-detail__value">ООО НКО "Мобильная карта"</div>
+                </div>
+                <div class="payment-detail__field">
+                    <div class="payment-detail__label">Код операции</div>
+                    <div class="payment-detail__value">0994976163208</div>
+                </div>
+                <div class="payment-detail__field">
+                    <div class="payment-detail__label">Тип операции</div>
+                    <div class="payment-detail__value">Денежный перевод</div>
+                </div>
+            </div>
+        </div>
+        <div class="trigger_options" tabindex="2">
+            <div class="option"><img class="plus_icon" src="imgs/ico_plus%20copy.png" width="22" height="22" alt="Добавить новую карту" />
+                <span class="option__bank">Новая карта</span>
+            </div>
+        </div>
+        <div class="options options-hide">
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">Альфа Банк</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/logo_bank_tinkoff.png" width="44" height="44" alt="Тинькофф" />
+                <span class="option__bank">Тинькофф</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/logo_bank_tinkoff.png" width="44" height="44" alt="Тинькофф" />
+                <span class="option__bank">Очень длинное название банка которое может не влезть в наш супер элемент</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">В меру длинное название</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">Альфа Банк</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">Альфа Банк</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">Альфа Банк</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">Альфа Банк</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">Альфа Банк</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img src="imgs/ico_alfa.png" width="44" height="44" alt="Альфабанк" />
+                <span class="option__bank">Альфа Банк</span><span class="option__card-num">4154 81** **** 9993</span>
+            </div>
+            <div class="option"><img class="plus_icon" src="imgs/ico_plus%20copy.png" width="22" height="22" alt="Добавить новую карту" />
+                <span class="option__bank">Новая карта</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__back">
+                <label>Три цифры на <span class="wrap-str">обороте карты</span></label>
+                <input type="text" maxlength="3" class="card__cvv" placeholder="CVV" tabindex="5" />
+            </div>
+            <div class="card__front">
+                <input type="text" maxlength="10" class="card__number" placeholder="Номер карты" tabindex="3" />
+                <div class="card__expired">
+                    <label>Действует до</label><input type="text" placeholder="MM/YY" tabindex="4" />
+                </div>
+                <input type="text" class="card__owner" placeholder="Имя и фамилия латиницей" tabindex="4" />
+            </div>
+        </div>
+        <div class="save-card">
+            <input id="check_save_card" type="checkbox" class="checkbox" tabindex="6" />
+            <label for="check_save_card">Сохранить эту карту для будущих платежей и вывода денег</label>
+        </div>
+        <button id="next_btn" class="button right" tabindex="7">Продолжить</button>
+    </div>
+    <footer>
+        <div class="col-33 cupis-logo">
+            <a href="https://1cupis.ru" target="_blank" tabindex="8"></a>
+        </div>
+        <div class="col-33">
+            <img src="imgs/secure_logos.png" width="255" height="25" alt="Verified by VISA MasterCard SecureCode MIR ACCEPT PCI DSS" />
+        </div>
+        <div class="col-33 phone">
+            <a href="tel:88001004088" class="phone-ref" tabindex="9">
+                <img src="imgs/phone_16.png" width="16" height="15" alt="phone call 24hours available"/>8 (800) 100-40-88
+            </a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
