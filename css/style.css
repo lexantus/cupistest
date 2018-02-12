@@ -171,58 +171,52 @@ table {
 input {
     font-size: 18px;
     line-height: 24px;
+    font-weight: 100;
     padding: 8px 0;
     color: rgba(136, 136, 136, 0.87);
     border: none;
     border-bottom: 1px solid #E0E0E0;
     margin-top: 7px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 input:focus {
     border: none;
     border-bottom: 2px solid #00B731;
     outline: none;
-    margin-bottom: 7px;
+    margin-bottom: 15px;
 }
 
 .trigger_options {
-    border-radius: 6px;
     border: 1px solid #E0E0E0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.trigger_options:hover {
+    border-color: #B5B5B5;
+}
+
+.trigger_options.trigger_open {
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
 }
 
 .trigger_options .option {
     border: none;
-    border-radius: 6px;
 }
 
 .trigger_options .option:hover {
-    background: #fff;
-}
-
-.trigger_options:hover {
-    border: 1px solid #B5B5B5;
+    border: none;
     border-radius: 6px;
+    background: white;
 }
 
-.trigger_options:focus {
-    outline: none;
-    border: 1px solid #B5B5B5;
-    border-radius: 6px;
-}
-
-.trigger_open,
-option {
+.option.trigger_open {
     background: #F1F2F6;
-    border: 1px solid #E0E0E0;
 }
 
-.trigger_open,
-.option:hover {
+.option.trigger_open:hover {
     background: #F1F2F6;
 }
 
@@ -304,7 +298,7 @@ option {
     left: -99999px;
 }
 
-.checkbox + label {
+.checkbox + label p {
     position: relative;
     padding-left: 40px;
     padding-top: 6px;
@@ -312,6 +306,8 @@ option {
     padding-right: 6px;
     cursor: pointer;
     font-size: 14px;
+    line-height: 19px;
+    font-weight: 100;
     color: #888;
     letter-spacing: 0;
     -webkit-user-select: none;
@@ -320,7 +316,7 @@ option {
     user-select: none;
 }
 
-.checkbox:checked + label:before {
+.checkbox:checked + label p:before {
     content: '';
     position: absolute;
     left: 0;
@@ -332,7 +328,7 @@ option {
     border: 1px solid #00B731;
 }
 
-.checkbox:not(:checked) + label:before {
+.checkbox:not(:checked) + label p:before {
     content: '';
     position: absolute;
     left: 0;
@@ -343,20 +339,20 @@ option {
     border-radius: 3px;
 }
 
-.checkbox:not(:checked):hover + label:before {
+.checkbox:not(:checked):hover + label p:before {
     border: 1px solid #B5B5B5;
 }
 
-.checkbox:not(:checked):focus + label:before {
+.checkbox:not(:checked):focus + label p:before {
     border: 1px solid #B5B5B5;
 }
 
-.checkbox:checked:hover + label:before {
+.checkbox:checked:hover + label p:before {
     background: #00C936;
     border: 1px solid #00C936;
 }
 
-.checkbox:checked + label:after {
+.checkbox:checked + label p:after {
     content: '';
     position: absolute;
     left: 5px;
@@ -393,10 +389,6 @@ option {
     outline: none;
 }
 
-.button:active {
-    border: 1px solid red;
-}
-
 /* GUI END */
 
 /* APP START */
@@ -410,8 +402,6 @@ body {
     position: relative;
     background: #F1F2F6;
     font-family: 'OpenSans', sans-serif;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 
 h1 {
@@ -419,6 +409,16 @@ h1 {
     color: #37393B;
     letter-spacing: 0;
     margin-bottom: 14px;
+}
+
+.bookmaker-logo {
+    background: black;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 48px;
+    top: 40px;
+    border-radius: 50%;
 }
 
 .container {
@@ -436,6 +436,7 @@ h1 {
     -webkit-box-shadow: 0 3px 7px 0 rgba(63, 85, 102, 0.11);
     box-shadow: 0 3px 7px 0 rgba(63, 85, 102, 0.11);
     overflow: hidden;
+    position: relative;
 }
 
 footer {
@@ -474,6 +475,9 @@ footer {
     letter-spacing: 0;
     display: block;
     padding: 5px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .payment-detail {
@@ -541,7 +545,6 @@ footer {
 
 .payment-detail__info .payment-detail__field:last-child {
     margin-bottom: 0px;
-    color: red;
 }
 
 .payment-detail__field {
@@ -565,6 +568,7 @@ footer {
     position: relative;
     height: 266px;
     margin-bottom: 24px;
+    font-weight: 100;
 }
 
 .card__front {
@@ -619,7 +623,7 @@ footer {
     border: 1px solid #E0E0E0;
     border-radius: 6px;
     top: 45px;
-    left: 202px;
+    right: 0;
     padding-right: 50px;
 }
 
@@ -635,7 +639,7 @@ footer {
 }
 
 .card__back label {
-    left: 174px;
+    right: 68px;
     top: 84px;
     position: absolute;
     opacity: 0.34;
@@ -650,7 +654,7 @@ footer {
     background: #FFFFFF;
     border: 1px solid #D5D5D6;
     border-radius: 6px;
-    left: 174px;
+    right: 94px;
     top: 139px;
     position: absolute;
     text-align: center;
@@ -687,7 +691,7 @@ footer {
     display: block;
     width: 193px;
     height: 25px;
-    background: url(../imgs/cupis-logo-grey.png) left top no-repeat;
+    background: url(../imgs/cupis-logo-grey.png) left center no-repeat;
 }
 
 .cupis-logo a:hover {
@@ -722,13 +726,190 @@ footer {
 /* ADAPTIVE START */
 
 @media only screen and (max-width: 872px) {
-    body {
-        background: red;
-    }
-
     .container {
         padding-left: 48px;
         padding-right: 136px;
+        max-width: 736px;
+    }
+
+    h1 {
+        margin-left: 95px;
+        margin-bottom: 39px;
+    }
+
+    footer {
+        max-width: 736px;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-top: 0;
+        max-width: 600px;
+    }
+
+    .bookmaker-logo {
+        width: 64px;
+        height: 64px;
+        left: 32px;
+        top: 32px;
+    }
+
+    footer {
+        max-width: 600px;
+    }
+
+    .cupis-logo {
+        width: 50%;
+    }
+
+    .phone {
+        width: 50%;
+    }
+
+    .secure-logos {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 598px) {
+    .container {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 26px;
+        padding-bottom: 32px;
+        margin-top: 0;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .container h1 {
+        font-size: 20px;
+        margin-left: 76px;
+        text-align: left;
+    }
+
+    .bookmaker-logo {
+        width: 48px;
+        height: 48px;
+        left: 16px;
+        top: 16px;
+        -o-object-fit: scale-down;
+        object-fit: scale-down;
+    }
+
+    .money-info {
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: left;
+    }
+
+    .money-info__sum {
+        width: 50%;
+    }
+
+    .money-info__commision {
+        margin-left: 0;
+        width: 50%;
+    }
+
+    .money-info__heading {
+        font-size: 11px;
+    }
+
+    .payment-detail__trigger {
+        font-size: 11px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 16px;
+        border-top: 1px solid #ECECEC;
+        border-bottom: 1px solid #ECECEC;
+        width: 100%;
+    }
+
+
+    .payment-detail__trigger:after {
+        right: 16px;
+        top: 20px;
+    }
+
+    .payment-detail {
+        text-align: left;
+    }
+
+    .trigger_options {
+        display: none;
+    }
+
+    #next_btn {
+        float: none;
+        padding-left: 84.5px;
+        padding-right: 84.5px;
+    }
+
+    .secure-logos {
+        display: none;
+    }
+
+    .card {
+        display: none;
+    }
+
+    .save-card {
+        text-align: left;
+        margin: 16px;
+    }
+
+    footer {
+        background: #F1F2F6;
+        padding: 0;
+        max-width: 320px;
+        height: 180px;
+    }
+
+    .cupis-logo {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .cupis-logo a,
+    .cupis-logo a:hover {
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-left: 160px;
+        padding-right: 160px;
+        background-position: center center;
+    }
+
+
+    .phone {
+        width: 100%;
+        height: 60px;
+        float: none;
+        text-align: center;
+    }
+
+    .phone-ref {
+        font-size: 15px;
+    }
+
+    .secure-logos {
+        display: block;
+        float: none;
+        height: 60px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-top: 1px solid #DFE0E3;
+    }
+
+    .secure-logos img {
+        margin: 17px 0;
     }
 }
 
